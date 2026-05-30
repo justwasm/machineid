@@ -1,4 +1,4 @@
-module github.com/denisbrodbeck/machineid
+module github.com/justwasm/machineid
 
 go 1.25.0
 
