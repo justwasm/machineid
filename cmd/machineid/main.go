@@ -26,8 +26,7 @@ Options:
 
 Try:
   machineid
-  machineid --appid MyAppID
-`
+  machineid --appid MyAppID`
 
 func usage() {
 	log.Fatalln(usageStr)
