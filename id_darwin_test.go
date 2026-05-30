@@ -50,7 +50,7 @@ func Test_extractID_invalidInput(t *testing.T) {
 	if got != "" {
 		t.Errorf("expected empty string, got some value %s", got)
 	}
-	if strings.Contains(err.Error(), "Failed to extract 'IOPlatformUUID'") == false {
+	if strings.Contains(err.Error(), "failed to extract 'IOPlatformUUID'") == false {
 		t.Errorf("Got unexpected error: %v", err)
 	}
 }

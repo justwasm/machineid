@@ -25,7 +25,7 @@ func machineID() (string, error) {
 }
 
 func extractID(lines string) (string, error) {
-	for _, line := range strings.Split(lines, "\n") {
+	for line := range strings.SplitSeq(lines, "\n") {
 		if strings.Contains(line, "IOPlatformUUID") {
 			parts := strings.SplitAfter(line, `" = "`)
 			if len(parts) == 2 {
@@ -33,5 +33,5 @@ func extractID(lines string) (string, error) {
 			}
 		}
 	}
-	return "", fmt.Errorf("Failed to extract 'IOPlatformUUID' value from `ioreg` output.\n%s", lines)
+	return "", fmt.Errorf("failed to extract 'IOPlatformUUID' value from `ioreg` output.\n%s", lines)
 }
