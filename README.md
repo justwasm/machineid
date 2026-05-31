@@ -8,7 +8,7 @@
 
 ## Main Features
 
-* Cross-Platform (tested on Win7+, Debian 8+, Ubuntu 14.04+, OS X 10.6+, FreeBSD 11+)
+* Cross-Platform (tested on Win7+, Debian 8+, Ubuntu 14.04+, OS X 10.6+, FreeBSD 11+, and browsers via WebAssembly)
 * No admin privileges required
 * Hardware independent (no usage of MAC, BIOS or CPU — those are too unreliable, especially in a VM environment)
 * IDs are unique<sup>[1](#unique-key-reliability)</sup> to the installed OS
@@ -24,7 +24,7 @@ go get github.com/justwasm/machineid
 You can also add the cli app directly to your `$GOPATH/bin` with
 
 ```bash
-go get github.com/justwasm/machineid/cmd/machineid
+go install github.com/justwasm/machineid/cmd/machineid@latest
 ```
 
 ## Usage
@@ -87,6 +87,7 @@ The following sources are used:
 * **Linux** uses `/var/lib/dbus/machine-id` ([man](http://man7.org/linux/man-pages/man5/machine-id.5.html))
 * **OS X** uses `IOPlatformUUID`
 * **Windows** uses the `MachineGuid` from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography`
+* **Browser (js/wasm)** generates and persists a random UUID v4 in `localStorage`
 
 ## Unique Key Reliability
 
@@ -179,4 +180,4 @@ The Go gopher was created by [Denis Brodbeck](https://github.com/denisbrodbeck) 
 
 ## License
 
-The MIT License (MIT) — [Denis Brodbeck](https://github.com/denisbrodbeck). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
+The MIT License (MIT) — [Denis Brodbeck](https://github.com/denisbrodbeck). Please have a look at the [LICENSE](LICENSE) for more details.
