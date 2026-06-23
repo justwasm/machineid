@@ -87,7 +87,7 @@ The following sources are used:
 * **Linux** uses `/var/lib/dbus/machine-id` ([man](http://man7.org/linux/man-pages/man5/machine-id.5.html))
 * **OS X** uses `IOPlatformUUID`
 * **Windows** uses the `MachineGuid` from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography`
-* **Browser (js/wasm)** generates and persists a random UUID v4 in `localStorage`
+* **Browser/Web Worker (js/wasm)** generates and persists a random UUID v4 in `IndexedDB`
 
 ## Unique Key Reliability
 
